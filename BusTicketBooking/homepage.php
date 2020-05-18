@@ -9,45 +9,26 @@
 <html>
 <head>
 	<title>Homepage</title>
+	<link rel="stylesheet" type="text/css" href="homepagestyle.css">
 </head>
 <body>
-<center>
-<table>
-		<h1>Welcome home!</h1>
-		<tr>
-			<td><a href="UserInfo.php">User Profile</a></td>
-			
-		</tr>
-		<tr>
-			<td><a href="registration.php">Add user</a></td>
-			
-		</tr>
-		<tr>
-			<td><a href="BusInfo.php">Bus Info</a></td>
-			
-		</tr>
-		<tr>
-			<td><a href="CheckBonus.php">Bonus</a></td>
-			
-		</tr>
-		<tr>
-			<td><a href="Payment.php">Payment</a></td>
-			
-		</tr>
-		<tr>
-			<td></td>
-			
-		</tr>
-		<tr>
-			<td><a href="login.php">Log out</a></td>
-			
-		</tr>
-		
-
-
 
 	
-</table>
+
+	<div class="menu-bar"
+	<ul>
+		<li><a href="UserInfo.php">User Profile</a></li>
+		<li><a href="registration.php">Add user</a></li>
+		<li><a href="BusInfo.php">Bus Info</a></li>
+		<li><a href="CheckBonus.php">Bonus</a></li>
+		<li><a href="Payment.php">Payment</a></li>
+		<li><a href="login.php">Log out</a></li>
+	</ul>
+	
+
+</div>
+<center>
+<h1>Welcome home!</h1>
 </center>
 </body>
 </html>

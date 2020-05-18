@@ -1,0 +1,20 @@
+body{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	background: linear-gradient(rgba(0, 0, 50, 0.5),rgba(0,0,50,0.5)),url(bus.jpg);
+	background-size: auto;
+	background-position: center;
+	font-family: sans-serif;
+	background-repeat: no-repeat;
+	//background-color: yellow;
+}
+
+h1{
+	font-size: 32px;
+	color: rgb(255,215,0);
+	//opacity: 0.6;
+}
+div{
+	color:white;
+}

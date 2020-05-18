@@ -18,7 +18,7 @@
 				$_SESSION['number'] = $phonenum;
 				$_SESSION['pass'] = $password;
 
-				header("location: HomePage.php");
+				header("location: homePage.php");
 			}else{
 				echo "invalid Phone Number/password";
 			}
