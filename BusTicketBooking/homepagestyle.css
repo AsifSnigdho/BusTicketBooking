@@ -9,15 +9,15 @@ body
 	//margin: 0;
 	//padding: 0;
 	//text-align: ;
-	background-image: url(homepage.jpg);
-	background-size: 400px*500px;
+	background-image: url(homepage.jpeg);
+	background-size: auto;
 	background-position: center;
 	
 	font-family: sans-serif;
 	background-repeat: no-repeat;
 	//background-color: yellow;
 }
-.menu-bar
+/*.menu-bar
 {
 	background: rgb(0,100,0);
 	text-align: center;
@@ -41,9 +41,10 @@ body
 	text-decoration: none;
 	color: #fff;
 }
+*/
 
 h1{
 	font-size: 100px;
-	color: rgb(255,255,255);
+	color: rgb(220,200,100);
 	//opacity: 0.6;
 }

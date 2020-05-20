@@ -4,47 +4,67 @@
 		header("location: Login.php");
 	}
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Bus Information</title>
+<title>User info from database</title>
+<style>
+table {
+border-collapse: collapse;
+width: 100%;
+color: #588c7e;
+font-family: monospace;
+font-size: 25px;
+text-align: left;
+}
+th {
+background-color: #588c7e;
+color: white;
+}
+tr:nth-child(even) {background-color: #f2f2f2}
+</style>
 </head>
 <body>
-<center>
-<table border="1" cellspacing="0" height="200" width="100">
-	
-		
-		<tr>
-			<td>Bus No.</td>
-			<td>Time</td>
-			
-		</tr>
-		<tr>
-			<td>01</td>
-			<td>01.00</td>
-			
-		</tr>
-		<tr>
-			<td>02</td>
-			<td>02.00</td>
-			
-		</tr>
-		<tr>
-			<td>03</td>
-			<td>03.00</td>
-			
-		</tr>
-		<tr>
-			<td colspan="2"><a href="homepage.php">Back</a>
-			<input type="submit" name="" value="changetime"><input type="submit" name="" value="changeterminal"><input type="submit" name="" value="AddStoppage"></td>
-			
-		</tr>
-		
+<table>
+<tr>
+<th>Bus Number</th>
+
+<th>Time</th>
 
 
+</tr>
+<?php
+$conn = mysqli_connect("localhost", "root", "", "project");
+// Check connection
+if ($conn->connect_error) {
+die("Connection failed: " . $conn->connect_error);
+}
+$sql = "SELECT  Bus_Number,Time FROM businfo";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+// output data of each row
+while($row = $result->fetch_assoc()) {
+echo "<tr><td>" . $row["Bus_Number"]. "</td><td>" . $row["Time"] . "</td><td>";
+}
+echo "</table>";
+} else { echo "0 results"; }
+$conn->close();
+?>
 
-	
 </table>
+<table>
+	<tr>
+		<input type="button" id="time" name="button" value="change time">
+		<a href="homepage.php">Back</a>
+	</tr>
+</table>
+		
+
+
+
+	
+
 </center>
 </body>
 </html>
